@@ -2,7 +2,6 @@
     width: 300px;
     margin: auto;
     margin-bottom: 10px;
-    background-color: black;
 }
 #ukr_blue{
     height: 80px;
@@ -13,38 +12,82 @@
     background-color: yellow;
 }
 
+
+
 #jap_red{
     height: 80px;
     width: 80px;
     background-color: red;
     border-radius: 50px;
-    margin: 40px 110px;
+    margin: 40px 100px;
 }
 #jap_white{
     height: 160px;
-    width: 300px;
-    margin: auto;
     background-color: white;
     border: 2px solid black;
-    margin-bottom: 20px;
 }
 
-#iceland{
-    background-color: rgb(201, 16, 16);
+
+#ice_blue{
+    background-color: rgb(38, 38, 156);
     height: 160px;
-    width: 300px;
-    margin: auto;
-    margin-bottom: 20px;
 }
-#ice_white{
+#ice_white_hor{
+    width: 30px;
+    height: 160px;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+    margin-left: 50px;
+}
+#ice_white_ver{
+    width: 300px;
+    height: 30px;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+    margin-top: -90px;
+}
+#ice_red_hor{
+    width: 20px;
+    height: 160px;
+    background-color: red;
+    position: relative;
+    z-index: 3;
+    margin-top: -160px;
+    margin-left: 55px;
+}
+#ice_red_ver{
+    width: 300px;
+    height: 20px;
+    background-color: red;
+    position: relative;
+    z-index: 1;
+    margin-top: -25px;
+}
+
+
+#chezh_red{
+    background-color: rgb(201, 16, 16);
+    height: 80px;
+    position: relative;
+    z-index: 1;
+}
+#chezh_white{
     background-color: rgb(255, 255, 255);
     height: 80px;
+    border: 1px solid black;
+    position: relative;
+    z-index: 1;
 }
-#ice_blue{
+#chezh_blue{
     width: 0;
     height: 0;
     border-left: 160px solid rgb(38, 38, 156);
     border-top: 80px solid transparent;
     border-bottom: 80px solid transparent;
     transform: (-50%, -50%);
+    position: relative;
+    z-index: 3;
+    margin-top: -160px;
 }
