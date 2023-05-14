@@ -1,1 +1,40 @@
 *{box-sizing: border-box;}
+
+.main_div{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.border{
+    width: 30%;
+    margin: 10px;
+    border: 5px solid rgb(53, 53, 53);
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+.border:hover{
+    border: 5px solid rgb(214, 203, 4);
+    transform: rotateZ(45deg);
+}
+
+.border:nth-child(3n-2){
+    border: 5px solid rgb(224, 8, 8);
+}
+.border:nth-child(3n-2):hover{
+    border: 5px solid rgb(214, 203, 4);
+}
+
+@media screen and (max-width: 900px){
+    .border{
+        width: 40%;
+        margin: 10px;
+        border: 5px solid rgb(53, 53, 53);
+        border-radius: 50%;
+        transition: all 0.5s ease;
+    }
+    .border:nth-child(3n-2){
+        border: 5px solid rgb(53, 53, 53);
+    }
+}
