@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+.sectionInput{
+    text-align: center;
+    margin-top: 20px;
+}
+
+label{
+    margin-right: 10px;
+}
+input[type=text]{
+    border-radius: 5px;
+    padding: 5px;
+    width: 200px;
+}
+
+.btn_style{
+    margin: 20px;
+    padding: 7px 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(216, 24, 24);  
+    color: white;  
+    cursor: pointer;
+}
+.btn_style:first-child{
+    background-color: rgb(16, 154, 36);
+}
