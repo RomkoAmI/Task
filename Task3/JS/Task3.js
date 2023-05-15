@@ -14,7 +14,7 @@ function createTable(data){
     table.appendChild(thead);
 
     for(let j = 0; j < data.length; j++){
-        let univeristy = data[j];
+        let university = data[j];
         let row = document.createElement('tr');
 
         let indexCell = document.createElement('td');
@@ -22,11 +22,11 @@ function createTable(data){
         row.appendChild(indexCell);
 
         let nameCell = document.createElement('td');
-        nameCell.textContent = university[j];
+        nameCell.textContent = university.name;
         row.appendChild(nameCell);
 
         let domainCell = document.createElement('td');
-        domainCell.textContent = university.domain;
+        domainCell.textContent = university.domains;
         row.appendChild(domainCell);
 
         let webCell = document.createElement('td');
@@ -44,7 +44,7 @@ function createTable(data){
 }
 
 document.getElementById('btnSend').addEventListener('click', function(){
-    let countryInput = documnet.getElementById('countryInput');
+    let countryInput = document.getElementById('countryInput');
     let country = countryInput.value;
     if(country.trim() === ''){
         alert('Enter the country!');
@@ -54,5 +54,31 @@ document.getElementById('btnSend').addEventListener('click', function(){
     let resultTable = document.getElementById('resultTable');
     resultTable.innerHTML = '';
 
-    
+    let url = 'http://universities.hipolabs.com/search?country=' + country;
+    fetch(url)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data){
+            if (data.length === 0){
+                alert('No country was found!');
+                return;
+            }
+
+            let table = createTable(data);
+
+            let resultTable = document.getElementById('resultTable');
+            resultTable.appendChild(table);
+        })  
+        .catch(function(error) {
+            console.log('Сталася помилка', error);
+        });
 })
+
+document.getElementById('btnClear').addEventListener('click', function(){
+    countryInput = document.getElementById('countryInput');
+    countryInput.value = "";
+
+    resultTable = document.getElementById('resultTable');
+    resultTable.innerHTML = "";
+});
