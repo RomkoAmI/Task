@@ -1,3 +1,4 @@
+//Створюю лічильник і поточну дату
 let images = document.getElementsByTagName('img');
 
 let currentTime = new Date();
@@ -20,10 +21,7 @@ document.body.insertBefore(header2, document.body.firstChild);
 document.body.insertBefore(header1, document.body.firstChild);
 
 
-
-
-
-
+//Створюю велику картинку
 let overlay = document.querySelector('.overlay');
 let largeImage = document.getElementById('bigImage');
 let closeButton = document.querySelector('.closeButton');
